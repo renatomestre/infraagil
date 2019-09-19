@@ -1,3 +1,4 @@
+# Playbook de instalação do GitLab em Ansible
 - name: Instalando o GitLab...
   vars:
     host: devops
