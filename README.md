@@ -18,3 +18,4 @@ Testando o GitLab.
 |---------|------------|
 | Rodrigo | Infra Ágil |
 | Pedro   | Perl, PHP  |
+| Bira    | Jô         |
