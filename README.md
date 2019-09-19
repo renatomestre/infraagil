@@ -11,3 +11,10 @@ Testando o GitLab.
 ```php
 <?php phpinfo(); ?>
 ```
+
+### Tabelinha marota. Show!
+
+| Nome    | Curso      |
+|---------|------------|
+| Rodrigo | Infra Ágil |
+| Pedro   | Perl, PHP  |
