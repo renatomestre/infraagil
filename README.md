@@ -18,4 +18,7 @@ Testando o GitLab.
 |---------|------------|
 | Rodrigo | Infra Ágil |
 | Pedro   | Perl, PHP  |
+<<<<<<< HEAD
 | Bira    | Jô Soares  |
+=======
+>>>>>>> 0e98983f6ccc6629b00476eb26ac0480f787e03c
