@@ -1,0 +1,25 @@
+- name: Instalando o GitLab...
+  vars:
+    host: devops
+  hosts: "{{host}}"
+  become: yes
+  tasks:
+
+  - name: Instalando pacotes...
+    apt:
+      name: ['curl', 'openssh-server', 'ca-certificates']
+      state: present
+
+  - name: Baixando o script...
+    get_url:
+      url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
+      dest: /root/script.deb.sh
+      mode: 0755
+
+  - name: Executando o Script para Debian...
+    shell: /root/script.deb.sh
+
+  - name: Instalando o "gitlab-ce"...
+    apt:
+      name: gitlab-ce
+      state: present

@@ -1,0 +1,25 @@
+- name: Instalando no Debian...
+  import_tasks: debian.yml
+  when: ansible_distribution|upper == 'DEBIAN'
+
+- name: Instalando no CentOS...
+  import_tasks: centos.yml
+  when: ansible_distribution|upper == 'CENTOS'
+
+- name: Copiando e descompactando o app...
+  unarchive:
+    src: https://hectorvido.dev/site.tar.gz
+    dest: /var/www/html
+    remote_src: yes
+    
+- name: Apagando o index.html...
+  file:
+    path: /var/www/html/index.html
+    state: absent
+    force: yes
+
+- name: Copiando o login.php...
+  template:
+    src: login.php
+    dest: /var/www/html/login.php
+    force: yes
